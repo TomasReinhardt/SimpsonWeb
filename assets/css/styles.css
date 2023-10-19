@@ -1,0 +1,743 @@
+* {
+    font-family: 'Rock Salt', cursive;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #10acfa;
+}
+
+.opacity1 {
+    opacity: 1 !important;
+}
+
+#contactButton {
+    opacity: 0.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0px;
+    width: 50px !important;
+    border-radius: 100%;
+    text-decoration: none;
+    color: black;
+    animation-duration: 3s;
+    animation-name: buttonContact;
+    transition: all 500ms;
+}
+
+#contactButton:hover {
+    opacity: 1;
+}
+
+@keyframes buttonContact {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.2;
+    }
+}
+
+/* MENU */
+
+#menu {
+    z-index: 99;
+}
+
+#menu > .navbar {
+    background-color: #10acfa !important;
+    height: 10vh;
+    z-index: 99;
+}
+
+#menu > .navbar > .container-fluid{
+    background-color: #10acfa !important;
+}
+
+#navbarNavAltMarkup {
+    justify-content: center;
+}
+
+#navbarNavAltMarkup > .navbar-nav {
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+#navbarNavAltMarkup > .navbar-nav > .nav-link {
+    font-size: 30px;
+    -webkit-text-stroke: 1px black !important;
+    color: #a88e17 !important; 
+    font-weight: 900 !important;
+    animation-duration: 3s;
+    animation-name: animacionMenu;
+    transition: all 300ms;
+}
+
+#navbarNavAltMarkup > .navbar-nav > .nav-link:hover {
+    color: #ffd000 !important; 
+    -webkit-text-stroke: 1px #ffd000 !important;
+
+}
+
+@keyframes animacionMenu {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* NUBES */
+
+#nubes {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 90vh;
+}
+
+#nubes > .divNubes {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#nubes > .divNubes > img {
+    width: 60%;
+}
+
+#characters >#nubes,
+#character >#nubes,
+#quotes >#nubes,
+#contact >#nubes {
+    z-index: -1;
+    position: fixed;
+}
+
+#nubes > #nubesDer {
+    align-items: end;
+}
+
+#nubes > #nubesIzq > .nubeCentro {
+    opacity: 1;
+    margin-left: -10%;
+    animation-duration: 4s;
+    animation-name: animacionNubeCentroIzq;
+}
+
+#nubes > #nubesIzq > .nubeLateral {
+    opacity: 1;
+    margin-left: 30%;
+    animation-duration: 4s;
+    animation-name: animacionNubLateralIzq;
+    
+}
+
+#nubes > #nubesDer > .nubeCentro {
+    opacity: 1;
+    margin-right: -10%;
+    animation-duration: 4s;
+    animation-name: animacionNubeCentroDer;
+}
+
+#nubes > #nubesDer > .nubeLateral {
+    opacity: 1;
+    margin-right: 30%;
+    animation-duration: 4s;
+    animation-name: animacionNubLateralDer;
+}
+
+@keyframes animacionLogo {
+    from {
+        opacity: 1;
+        width: 20%;
+    }
+    to {
+        width: 50%;
+    }
+}
+
+@keyframes animacionNubeCentroDer {
+    from {
+        opacity: 1;
+        margin-right: 50%;
+
+    }
+    to {
+        margin-right: -10%;
+    }
+}
+
+@keyframes animacionNubLateralDer {
+    from {
+        opacity: 1;
+        margin-right: 120%;
+
+    }
+    to {
+        margin-right: 30%;
+    }
+}
+
+
+@keyframes animacionNubeCentroIzq {
+    from {
+        opacity: 1;
+        margin-left: 50%;
+
+    }
+    to {
+        margin-left: -10%;
+    }
+}
+
+@keyframes animacionNubLateralIzq {
+    from {
+        opacity: 1;
+        margin-left: 120%;
+
+    }
+    to {
+        margin-left: 30%;
+    }
+}
+
+/* INICIO */
+
+#inicio {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#inicio > #logo {
+    width: 50%;
+    animation-duration: 4s;
+    animation-name: animacionLogo;
+    z-index: -1;
+}
+
+/* PERSONAJES */
+
+#characters {
+    display: flex;
+    justify-content: center;
+    min-height: 90vh;
+    width: 100%;
+}
+
+#characters > #charactersDiv {
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-evenly;
+}
+
+#contactButton,
+#characters > #nextPage {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    margin: 20px;
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #a88e17;
+    border: 2px solid black;
+    transition: all 300ms;
+}
+
+#contactButton:hover,
+#characters > #nextPage:hover{
+    background-color: #ffd000;
+}
+
+#characters > #charactersDiv > .characterBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 100%;
+    opacity: 0;
+    transition: all 1000ms;
+}
+
+#characters > #charactersDiv > .characterBox > .character {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 2px solid black;
+    overflow: hidden;
+    transition: all 400ms;
+    cursor: pointer;
+    text-decoration: none;
+    background-image: url("../img/fondoCharacter.png");
+    background-size: 100% 100%;
+    color: black;
+}
+
+#characters > #charactersDiv > .characterBox > .character > span {
+    width: 190px;
+    height: 190px;
+    padding: 10px;
+    display: none;
+    transform: rotateY(180deg);
+    background-color: #ff0000af;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    border-radius: 100%;
+    animation-duration: 1.5s;
+    animation-name: characterBox;
+    transition: all 300ms;
+}
+
+#characters > #charactersDiv > .characterBox > .character > img {
+    width: 100%;
+}
+
+#characters > #charactersDiv > .characterBox:hover > .character {
+    transform: rotateY(180deg);
+}
+
+#characters > #charactersDiv > .characterBox:hover > .character > span {
+    display: flex;
+}
+
+#characters > #charactersDiv > .characterBox:hover > .character > img {
+    display: none;
+}
+
+@keyframes characterBox {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* PERSONAJE */
+
+#character {
+    display: flex;
+    justify-content: center;
+    min-height: 90vh;
+    width: 100%;
+}
+
+#character > #characterCard {
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    animation-duration: 3s;
+    animation-name: zoom;
+}
+
+#character > #characterCard > #card {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#character > #characterCard > #card > #img {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#character > #characterCard > #card > #img > span {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/fondoDona.png");
+    background-size: 100% 100%;
+    z-index: -1;
+    animation-name: rotateDona;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#character > #characterCard > #card > #img > img {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#character > #characterCard > #card > #info {
+    width: 60%;
+}
+
+#character > #characterCard > #card > #info > h4 > i,
+#character > #characterCard > #card > #info > p {
+    font-family: cursive !important;
+}
+
+#character > #characterCard > #card > #info > h3,
+#character > #characterCard > #card > #info > h4,
+#character > #characterCard > #card > #info > h5,
+#character > #characterCard > #card > #info > p {
+    width: 100%;
+}
+
+#character > #characterCard > #card > #info > h5 {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+#character > #characterCard > #card > #info > h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#character > #characterCard > #card > #info > #state {
+    display: flex;
+    align-items: center;
+}
+
+#character > #characterCard > #card > #info > #state::after {
+    background-color: gray;
+    display: block;
+    width: 15px;
+    height: 15px;
+    content: "";
+    margin-left: 5px;
+    border-radius: 100%;
+}
+
+#character > #characterCard > #card > #info > .live::after {
+    background-color: lightgreen !important;
+}
+
+#character > #characterCard > #card > #info > .dead::after {
+    background-color: lightcoral !important;
+} 
+
+@keyframes rotateDona {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes zoom {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 940px) {
+    #character > #characterCard > #card > #info {
+        width: 100%;
+    }
+}
+
+/* CITAS */
+
+#quotes {
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+}
+
+#quotes > #quote {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#quotes > #quote > #imgQuote {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 100px;
+    border: 6px double black;
+    animation-name: entryImg;
+    animation-duration: 3s;
+}
+
+#quotes > #quote > #imgQuote > img{
+    width: 200px;
+}
+
+#quotes > #quote > #quoteInfo {
+    width: 60%;
+    min-height: 54px;
+    height: 140px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-left: 55px;
+    animation-name: quoteInfo;
+    animation-duration: 3s;
+    overflow: hidden;
+}
+
+#quotes > #quote > #quoteInfo > p {
+    height: 70px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: cursive;
+}
+
+#quotes > #quote > #quoteInfo::before{
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top: -20px;
+    margin-left: -62px;
+    border-left: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 30px solid white;
+    border-top: 25px solid white;
+    content: "";
+}
+
+#quotes > #getQuote {
+    position: fixed;
+    bottom: 30px;
+    width: 280px;
+    height: 80px;
+    border-radius: 20px;
+    background-color: transparent;
+    font-size: 23px;
+    border: 2px solid #ffd000;
+    -webkit-text-stroke: 1px black !important;
+    color: #a88e17 !important; 
+    font-weight: 900 !important;
+    transition: all 300ms;
+}
+
+#quotes > #getQuote:hover {
+    color: black !important; 
+    border-radius: 50px;
+    background-color: #ffd000;
+}
+
+@keyframes quoteInfo {
+    0% {
+        color: white;
+        height: 54px;
+        width: 0%;
+    }
+    5% {
+        width: 0%;
+    }
+    40% {
+        color: white;
+    }
+    50% {
+        height: 54px;
+        width: 60%;
+        color: black;
+    }
+    100% {
+        height: 140px;
+    }
+}
+
+@keyframes quoteInfo2 {
+    0% {
+        opacity: 0;
+        color: white;
+        height: 54px;
+    }
+    5% {
+    }
+    40% {
+        color: white;
+    }
+    50% {
+        opacity: 1;
+        height: 54px;
+        color: black;
+    }
+    100% {
+        height: 140px;
+    }
+}
+
+@keyframes entryImg {
+    from {
+        transform: rotateY(0deg) scale(0);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@media (max-width: 850px) {
+    #quotes {
+        align-items: start;
+    }
+
+    #quotes > #quote {
+        min-height: 400px;
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+
+    #quotes > #quote > #quoteInfo {
+        width: 100%;
+        animation-name: quoteInfo2;
+        animation-duration: 3s;
+        margin-left: 0px;
+    }
+
+    #quotes > #quote > #quoteInfo::before {
+        margin-top: -75px;
+        margin-left: 50px;
+        border-right: 30px solid transparent;
+        border-top: 30px solid transparent;
+        border-left: 30px solid transparent;
+        border-bottom: 30px solid white;
+    }
+}
+
+/* CONTACTO */
+
+#contact {
+    display: flex;
+    justify-content: center;
+    min-height: 90vh;
+    width: 100%;
+}
+
+#contact > #contactCard {
+    width: 60%;
+}
+
+#contact > #contactCard > form {
+    padding-top: 18px;
+    animation-name: entryInput;
+    animation-duration: 3s;
+    overflow: hidden;
+}
+
+#contact > #contactCard > form > div > .form-label {
+    position: absolute;
+    margin-top: 7px;
+    margin-bottom: 0px;
+    margin-left: 15px;
+    color: transparent;
+    transition: all 300ms;
+}
+
+#contact > #contactCard > form > div > .inputSelect {
+    color: black;
+    margin-top: -18px;
+    font-size: 10px;
+}
+
+#contact > #contactCard > form > div > .form-control {
+    height: 40px;
+    padding-left: 15px;
+    font-size: 15px;
+    background-color: transparent;
+    border: 3px solid #ffd000;
+    border-radius: 5px;
+    transition: all 300ms;
+}
+
+#contact > #contactCard > form > div > #inputDate {
+    width: 25%;
+    padding: 0px 15px;
+}
+
+#contact > #contactCard > form > div > .form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-radius: 16px;
+    background-color: #ffd00067;
+    border-color: #a88e17;
+}
+
+#contact > #contactCard > form > div > .form-control:focus::placeholder {
+    color: transparent;
+}
+
+#contact > #contactCard > form > div > .form-check-input {
+    border-radius: 100%;
+}
+
+#contact > #contactCard > form > #divButton {
+    display: flex;
+    justify-content: center;
+}
+
+#contact > #contactCard > form > #divButton > button {
+    width: 160px;
+    height: 50px;
+    border: 2px solid #ffd000;
+    border-radius: 20px;
+    background-color: transparent;
+    color: black;
+    font-size: 18px;
+    transition: all 500ms;
+}
+
+#contact > #contactCard > form > #divButton > button:hover {
+    background-color: #ffd000;
+    border-color: #a88e17;
+}
+
+@keyframes entryInput {
+    0% {
+        opacity: 0;
+        margin-top: -100vh;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1230px) {
+    #contact > #contactCard > form > div > #inputDate {
+        width: 30%;
+    }
+}
+
+@media (max-width: 1230px) {
+    #contact > #contactCard > form > div > #inputDate {
+        width: 40%;
+    }
+}
+
+@media (max-width: 770px) {
+    #contact > #contactCard > form > div > #inputDate {
+        width: 50%;
+    }
+}
+@media (max-width: 620px) {
+    #contact > #contactCard > form > div > #inputDate {
+        width: 100%;
+    }
+}
