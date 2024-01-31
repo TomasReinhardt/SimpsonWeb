@@ -51,7 +51,7 @@ function loadCharacter(id){
         }
     })
     if(find){
-        window.location.href = "http://127.0.0.1:5500/views/character.html"
+        window.location.href = "https://simpsonsweb.up.railway.app/views/character.html"
     }
 }
 
